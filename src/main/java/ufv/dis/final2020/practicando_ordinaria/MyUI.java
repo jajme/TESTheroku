@@ -34,7 +34,7 @@ public class MyUI extends UI {
     	lista lisatado = new lista();
     	
     	Grid<persona> gridcontactos = new Grid<>(persona.class);
-        gridcontactos.setItems(lista.getListaPersonas()); 
+        gridcontactos.setItems(lisatado.getListaPersonas()); 
     	
         final VerticalLayout layout = new VerticalLayout();
         
@@ -62,7 +62,7 @@ public class MyUI extends UI {
             try {
                 persona p =new persona(name.getValue(), surname.getValue(), dni.getValue(), nacimiento.getValue(), email.getValue(),Integer.parseInt(age.getValue()));
                 lisatado.add_alumno(p);
-                gridcontactos.setItems(lista.getListaPersonas());
+                gridcontactos.setItems(lisatado.getListaPersonas());
 				pdf.add_alumno(p);
 	        	Notification.show("documento generado");
 			} catch (Exception e1) {

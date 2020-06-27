@@ -7,7 +7,7 @@ public class lista {
 
 private static ArrayList<persona> listaPersonas;
 
-public static ArrayList<persona> getListaPersonas() {
+public ArrayList<persona> getListaPersonas() {
 	return listaPersonas;
 }
 
